@@ -1,0 +1,20 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <!-- remove methods -->
+  <remove-node path="/api/package[@name='com.burgstaller.okhttp.digest.fromhttpclient']/class[@name='Args']/method[@name='notEmpty' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.lang.String']]" />
+  <remove-node path="/api/package[@name='com.burgstaller.okhttp.digest.fromhttpclient']/class[@name='Args']/method[@name='notBlank' and count(parameter)=2 and parameter[1][@type='T'] and parameter[2][@type='java.lang.String']]" />
+
+  <!-- methods to properties -->
+  <attr path="/api/package[@name='com.burgstaller.okhttp.digest.fromhttpclient']/class[@name='HttpEntityDigester']/method[@name='buffer' and count(parameter)=0]" name="managedName">GetBufferObsolete</attr>
+  <attr path="/api/package[@name='com.burgstaller.okhttp.digest.fromhttpclient']/class[@name='HttpEntityDigester']/method[@name='buffer' and count(parameter)=0]" name="propertyName">Buffer</attr>
+  <attr path="/api/package[@name='com.burgstaller.okhttp.digest.fromhttpclient']/class[@name='HttpEntityDigester']/method[@name='outputStream' and count(parameter)=0]" name="managedName">GetOutputStream</attr>
+  <attr path="/api/package[@name='com.burgstaller.okhttp.digest.fromhttpclient']/class[@name='HttpEntityDigester']/method[@name='outputStream' and count(parameter)=0]" name="propertyName">OutputStream</attr>
+
+</metadata>

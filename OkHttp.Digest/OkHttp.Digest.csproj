@@ -1,0 +1,32 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.23">
+  <PropertyGroup>
+    <TargetFrameworks>MonoAndroid10.0</TargetFrameworks>
+    <IsBindingProject>true</IsBindingProject>
+    <AssemblyName>OkHttp.Digest</AssemblyName>
+    <RootNamespace>OkHttp.Digest</RootNamespace>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
+    <AndroidClassParser>class-parse</AndroidClassParser>
+    <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>OkHttp.Digest</PackageId>
+    <Version>2.5.0</Version>
+    <Authors>Bill Venhaus</Authors>
+    <Description>Xamarin.Android bindings for okhttp-digest</Description>
+    <Copyright>Copyright 2021</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/billvenhaus/OkHttp.Digest</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/billvenhaus/OkHttp.Digest</RepositoryUrl>
+    <PackageTags>okhttp square square.okhttp xamarin android monodroid</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Square.OkHttp3" Version="4.9.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Transforms\*.xml" />
+    <TransformFile Include="Transforms\*.xml" />
+    <None Remove="Jars\*.jar" />
+    <EmbeddedJar Include="Jars\*.jar" />
+  </ItemGroup>
+</Project>
